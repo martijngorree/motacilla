@@ -1,0 +1,20 @@
+{
+  "name": "motacilla",
+  "version": "0.0.1",
+  "description": "Wagtail based project boilerplate",
+  "repository": "https://github.com/martijngorree/motacilla.git",
+  "dependencies": {
+    "normalize-scss": "^5.0.3"
+  },
+  "devDependencies": {
+    "bourbon-neat": "^1.8.0",
+    "nodemon": "^1.10.2"
+  },
+  "scripts": {
+    "watch": "npm run watch:all",
+    "build:scss": "sassc -mt compressed scss/style.scss motacilla/static/css/style.css",
+    "watch:all": "nodemon -e scss --exec \"npm run build:scss\" --ignore node_modules/ --ignore bower_components/ --ignore build/"
+  },
+  "author": "Martijn Gorree",
+  "license": "GPL-3.0"
+}
